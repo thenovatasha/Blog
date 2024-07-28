@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>Hello Tiva!</p>
-</body>
-
-<script>
-    let ws; 
-    const proto = window.location.protocol === 'https:' ? 'wss' : 'ws';
-    ws = new WebSocket(`${proto}://${window.location.host}`);
-
-    ws.onmessage = (event) => {console.log(event.data)};
-</script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nova Tasha</title>
+    <link rel="icon" href="/assets/icon-128-DW1ENlL1.png" type="image/x-icon" />
+    <script type="module" crossorigin src="/assets/index-Di1ZKirT.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BSubQ57P.css">
+  </head>
+  <body>
+    <div id="root">React Did not render</div>
+  </body>
 </html>

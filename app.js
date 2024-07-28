@@ -1,11 +1,17 @@
-const http = require('http');
+import express from "express";
+import path from "path";
 
-http.createServer(function (req, res) {
+const app = express();
+const port = 3000;
 
-	res.write("Hello!");
-	res.end();
-}
+app.use(express.static(path.join(process.cwd())));
+app.get("/", (req, res) => {
+  res.sendFile(path.join(process.cwd(), "index.html"));
+});
 
-).listen(3000);
+app.get("*", (req, res) => {
+  res.sendFile(path.join(process.cwd(), "index.html"));
+});
+app.listen(port);
 
-console.log("Server started on port 3000");
+console.log("server started at http://localhost:" + port);
